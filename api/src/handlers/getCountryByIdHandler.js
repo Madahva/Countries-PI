@@ -1,4 +1,6 @@
-const { getCountryById } = require("../controllers/getContryByIdController.js");
+const {
+  getCountryById,
+} = require("../controllers/getCountryByIdController.js");
 
 async function getCountryByIdHandler(req, res) {
   const { id } = req.params;
