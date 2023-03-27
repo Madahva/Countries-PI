@@ -8,7 +8,7 @@ async function createActivityHandler(req, res) {
   try {
     const createdActivity = await createActivity(activity);
 
-    res.status(200).send(createdActivity);
+    res.status(202).send(createdActivity);
   } catch (error) {
     console.error(error);
     res.status(500).send(error);
