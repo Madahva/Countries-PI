@@ -22,14 +22,10 @@ const { conn } = require("./src/db.js");
 const {
   loadCountriesToDB,
 } = require("./src/controllers/loadCountriesToDBController.js");
-const {
-  getAllCountries,
-} = require("./src/controllers/getAllCountriesController.js");
 
 conn.sync({ force: true }).then(() => {
   server.listen(3001, async () => {
     await loadCountriesToDB();
-    await getAllCountries();
     console.log("%s listening at 3001"); // eslint-disable-line no-console
   });
 });
